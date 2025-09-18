@@ -20,17 +20,17 @@ class TurtleController(Node):
 
     def get_twist_msg(self):
         if self.time < 4:
-            msg = self.create_twist(1.0, PI/3)
+            msg = self.create_twist(1.0, PI/3)  # turn 2PI/3 rads (120 degrees) while moving forward
         elif self.time >= 4 and self.time < 8:
-            msg = self.create_twist(0.0, PI/3)
+            msg = self.create_twist(0.0, PI/3)  # turn 2PI/3 rads (120 degrees) in place
         elif self.time >= 8 and self.time < 12:
-            msg = self.create_twist(1.0, PI/3)
+            msg = self.create_twist(1.0, PI/3)  # turn 2PI/3 rads (120 degrees) while moving forward
         elif self.time >= 12 and self.time < 16:
-            msg = self.create_twist(0.0, PI/3)
+            msg = self.create_twist(0.0, PI/3)  # turn 2PI/3 rads (120 degrees) in place
         elif self.time >= 16 and self.time < 20:
-            msg = self.create_twist(1.0, PI/3)
+            msg = self.create_twist(1.0, PI/3)  # turn 2PI/3 rads (120 degrees) while moving forward
         else:
-            msg = self.create_twist(0.0, 0.0)
+            msg = self.create_twist(0.0, 0.0)   # stop
         return msg
     
     def timer_callback(self):

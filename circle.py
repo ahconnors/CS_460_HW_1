@@ -20,9 +20,9 @@ class TurtleController(Node):
 
     def get_twist_msg(self):
         if self.time < 20:
-            msg = self.create_twist(1.0, PI/5) # (PI/10 rads/sec) * (10 sec) = 
+            msg = self.create_twist(1.0, PI/5)  # (PI/5 rads/sec) * (10 sec) = 2PI rads = 1 full rotation
         else:
-            msg = self.create_twist(0.0, 0.0)
+            msg = self.create_twist(0.0, 0.0)   # stop
         return msg
     
     def timer_callback(self):
