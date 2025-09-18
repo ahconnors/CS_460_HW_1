@@ -20,7 +20,7 @@ class TurtleController(Node):
 
     def get_twist_msg(self):
         if self.time < 20:
-            msg = self.create_twist(1.0, PI/10)
+            msg = self.create_twist(1.0, PI/5) # (PI/10 rads/sec) * (10 sec) = 
         else:
             msg = self.create_twist(0.0, 0.0)
         return msg
